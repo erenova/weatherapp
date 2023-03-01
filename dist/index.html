@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/c92ddab15c.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+</head>
+
+<body>
+    <header>
+        <img src="assets/weather.jpg" alt="Logo by Midjourney" id="brand-logo">
+        <div class="query">
+            <form>
+                <input type="text" id="search-input" />
+                <button id="search-button">Search</button>
+            </form>
+        </div>
+        <div id="hamburger-menu" class="hamburger-menu nav-menu"><i id="hamburger-menu-button"
+                class="fa-solid fa-bars"></i></div>
+    </header>
+    <main>
+        <!--TODO1. Daily Forecast -->
+        <div id="today-weather" class="today-weather">
+            <div id="today-info" class="info-card">
+                <div class="card-header">
+                    <p id="city-val" class="city-name"></p>
+                </div>
+                <div class="card-main">
+                    <div class="card-temp-info">
+                        <p id="temp-val" class="temp-val celsius-selector"></p>
+                    </div>
+                    <div class="card-main-other">
+                        <div class="card-humidity-info">
+                            <p id="humidity-text">Humidity:
+
+                            </p><span id="humidity-val" class="humidity-value"></span>
+                        </div>
+                        <div class="card-feels-like">
+                            <p id="feelslike-text">Feels like:
+
+                            </p><span id="feels-like-val" class="feels-like-val celsius-selector"></span>
+                        </div>
+                        <div class="card-temp-min-max">
+                            <p id="temp-minmax-text">Temp min/max: </p><span class="temp-min-max" id="temp-min-max">
+                                <span id="min" class="min celsius-selector"></span> /
+                                <span id="max" class="max celsius-selector"></span>
+                            </span>
+
+                        </div>
+                        <div class="card-description">
+                            <p class="description-text" id="description-text">
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--TODO2. 5day Forecast- -->
+        <div class=" forecast" id="forecast">
+        </div>
+    </main>
+
+    <!--* Modal/menu-area -->
+    <div id="menu-item" class="menu-item deactive">
+        <div id="close-menu" class="close-menu">
+            <i id="close-menu-item" class="fa-solid fa-x"></i>
+        </div>
+        <div id="menu-selection-id" class="menu-selection">
+            <form>
+                <label for="eng">
+                    English <input type="radio" name="langSelect" id="eng" data-val="eng" checked>
+                </label>
+
+                <label for="tur">
+                    Turkish <input type="radio" name="langSelect" id="tur" data-val="tur">
+                </label>
+                <label for="celsius">Celsius <input type="radio" name="temperature" id="celsius" checked
+                        data-val="cel"></label>
+                <label for="fahrenheit">Fahrenheit <input type="radio" name="temperature" id="fahrenheit"
+                        data-val="fah"></label>
+            </form>
+        </div>
+    </div>
+    <div id="w-modal" class="menu-modal deactive"></div>
+</body>
+
+</html>

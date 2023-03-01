@@ -1,0 +1,180 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+*:focus {
+  outline: none;
+}
+/*? Others/ */
+body {
+  height: 100vh;
+}
+
+.deactive {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+/** Header */
+#brand-logo {
+width: 65px;
+height: 65px;
+border-radius: 50px;
+}
+form {
+  text-align: center;
+  display: grid;
+  gap: 5px;
+}
+#search-input {
+  text-align: center;
+}
+header {
+  background-color: #e6e4e5;
+  align-items: center;
+  display: flex;
+}
+.query {
+  margin-left: 3vh;
+}
+
+.nav-menu {
+  margin-left: 2vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.fa-bars {
+  font-size: 2rem;
+}
+/* Modal&Menu  */
+
+.menu-item {
+  right: 0;
+  top: 0;
+  z-index: 2;
+  position: absolute;
+  height: 100vh;
+  width: 50vw;
+  background-color: #e6e4e5;
+}
+
+.menu-modal {
+  right: 0;
+  top: 0;
+  z-index: 1;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color:rgba(0,0,0,0.2);
+}
+
+.close-menu {
+  display: flex;
+  color: red;
+  font-size: 2rem;
+  width: 45vw;
+  height: 6vh;
+  justify-content: end;
+  align-items: center;
+}
+
+/** main */
+
+main {
+  height: 50vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.info-card {
+  display: inline-block;
+  border-radius: 25px;
+  width: 220px;
+  height: 350px;
+  background-color: darkgray;
+}
+
+.card-main {
+  text-align: center;
+}
+
+/*! Card Items */
+
+.card-header {
+  text-align: center;
+}
+
+.city-name {
+  margin-top: 15px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.current-weather-text {
+  font-weight: bold;
+  font-size: 1;
+}
+
+.temp-val {
+  color: rgb(128, 32, 32);
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.temp-val::after {
+  color: rgb(0, 0, 0);
+}
+
+.card-humidity-info {
+  margin-top: 30px;
+
+}
+
+.humidity-value::after {
+  content: "%";
+}
+
+.card-main-other {
+  display: grid;
+  gap: 4vh;
+}
+
+
+.celsius-selector::after {
+  content: "°C";
+}
+
+.fahrenheit-selector::after {
+  content: "°F";
+}
+
+.card-description {
+  border:  1px solid blak;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+.menu-selection {
+  border: 1px solid black;
+}
+
+
+
+/* Media Query */
+/* @media screen and (min-width: 768px) {
+
+  #hamburger-menu-button {
+    display: none;
+  }
+} */
